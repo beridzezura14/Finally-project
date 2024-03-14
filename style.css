@@ -299,7 +299,7 @@ header{
     animation-range-end: cover 45vh;
 }
 .about-text p span{
-    animation-range-start: cover 28vh;
+    animation-range-start: cover 20vh;
     animation-range-end: cover 48vh;
 }
 @keyframes scroll-reveal{
@@ -354,38 +354,40 @@ header{
 
 /* ---------------------  start ranning */
 
-.ranning-paragraph {
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-start;
-    /* transform: rotate(1.5deg); */
-
+.marquee {
+    /* transform: rotate(-5deg); */
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 155px;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    
 }
-.ranning-paragraph h3{
-    max-width: auto;
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: 800;
-    background-color: rgb(10, 10, 10);
-    font-family: Arial, Helvetica, sans-serif;
+.marquee span{
+    padding: 10px 30px;
     color: white;
-    color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #d1d1d1;
-    white-space: no-wrap;
-    padding: 0 1rem;
-    letter-spacing: 3px;
-    animation: 3s move-text linear infinite;
-}
+    border-radius: 40px;
+    border: 1px solid white;
 
-@keyframes move-text{
-    0%{
-        transform: translateX(100);
-    }
-    100%{
-        transform: translateX(-100%); 
-    }
 }
+  
+.track {
+   position: absolute;
+   white-space: nowrap;
+   will-change: transform;
+   animation: marquee 32s linear infinite;
+}
+  
+@keyframes marquee {
+   from { transform: translateX(0); }
+   to { transform: translateX(-50%); }
+}
+  
 
 
 
