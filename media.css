@@ -1,0 +1,103 @@
+@media(min-width: 319px){
+    .about-icons{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(min-width: 560px){
+    .hero-h1{
+        font-size: 55px;
+
+    }
+    .world{
+        font-size: 27rem;
+    }
+
+
+    /* start about section */
+
+    .about{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    .about-text-paragraph{
+        width: 400px;
+    }
+
+
+
+}
+@media(min-width: 1120px){
+
+    .header, .hero{
+        max-width: 1100px;
+    }
+    .navbar{
+        display: flex;
+    }
+    .open{
+        display: none;
+    }
+    .LetsTalk{
+        display: block;
+    }
+
+    /* ---- start hero section  */
+    .hero-h1{
+        position: relative;
+        font-size: 65px;
+        /* left: -10rem; */
+        line-height: 80px;
+    }
+    .world{
+        font-size: 35rem;
+        right: 40px;
+ 
+    }
+    /* .hero-details{
+        left: -9.3rem;
+    } */
+    .hero-details a{
+        color: #dfdfdf;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .circle{
+        display: flex;
+    }
+
+
+    /* start about section */
+
+    .about{
+        position: relative;
+        max-width: 1080px;
+        gap: 60px;
+    }
+    .bg-relative{
+        width: 500px;
+    }
+    .team-pic{
+        border-top-right-radius: 40%;
+        /* border-bottom-right-radius: 40%; */
+    }
+    .about-text-header{
+        font-size: 60px;
+    }
+    .about-text-paragraph{
+        width: 550px;
+    }
+
+    .about::after{
+        content: "ABOUT";
+        font-weight: 800;
+        letter-spacing: 15px;
+        right: 0;
+        color: #1b1b1b;
+        position: absolute;
+        top: 20px;
+        font-size: 160px;
+        z-index: -1;
+    }
+}

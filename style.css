@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+@font-face {
+    font-family: 'font1';
+    src: url(fonts/font1.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    /* overflow-x: hidden; */
+}
+
+body{
+    background-color: #151515;
+    font-family: "Montserrat", sans-serif;
+    /* font-optical-sizing: auto;
+    font-style: normal; */
+    scroll-behavior: smooth;
+
+    overflow-x: hidden;
+}
+/* ---------------    this is rain animation part */
+.rain-line{
+    position: absolute;
+    width: 100%;
+    height: 95rem;
+}
+
+.rain1, .rain2, .rain3, .rain4, .rain5, .rain6{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #80808069;
+    left: 13%;
+}
+.rain2{
+    left: 28%;
+}
+.rain3{
+    left: 43%;
+}
+.rain4{
+    left: 58%;
+}
+.rain5{
+    left: 73%;
+}
+.rain6{
+    left: 88%;
+}
+
+.move1, .move2, .move3, .move4, .move5, .move6{
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: rgb(145, 145, 145);
+    left: 13%;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 138px, rgba(255, 255, 255, 0.22) 0px 15px 112px;
+
+    animation: 8s toptobottom ease-in infinite;
+}
+.move2{
+    left: 28%;
+    animation: 9s toptobottom ease-in infinite;
+}
+.move3{
+    left: 43%;
+    animation: 10s toptobottom ease-in infinite;
+}
+.move4{
+    left: 58%;
+    animation: 7s toptobottom ease-in infinite;
+}
+.move5{
+    left: 73%;
+    animation: 11s toptobottom ease-in infinite;
+}
+.move6{
+    left: 88%;
+    animation: 6s toptobottom ease-in infinite;
+}
+
+@keyframes toptobottom{
+    from{
+        top: 0;
+    }
+    to{
+        top: 98%;
+    }
+}
+
+/* ------------   start header */
+
+header{
+    position: relative;
+    background: url(img/bg_01.jpg) center no-repeat;
+    background-size: cover;
+}
+.header{
+    max-width: 90%;
+    margin: auto;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 70px;
+}
+.navbar{
+    z-index: 111;
+    padding: 5px;
+    display: flex;
+    gap: 30px;
+    display: none;
+
+}
+.navbar li a{
+    color: white;
+    transition: .5s;
+}
+.active{
+    color: greenyellow !important;
+}
+.navbar li a:hover{
+    color: greenyellow !important; 
+}
+.header-icons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.LetsTalk{
+    z-index: 1111;
+    padding: 10px 25px;
+    border: 1px solid #636363;
+    color: #dfdfdf;
+    transition: .5s;
+    /* border-radius: 30px; */
+    display: none;
+}
+.LetsTalk:hover{
+    border: 1px solid white;
+    color: white;
+}
+.open{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* -------------   start hero section */
+.color-green{
+    color: greenyellow;
+}
+.hero{
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    height: 503px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-h1{
+    font-size: 27px;
+    letter-spacing: 3px;
+    font-family: 'font1', sans-serif;
+    /* font-weight: 500; */
+    position: relative;
+    z-index: 111;
+    text-shadow: 0 0 15px black;
+    margin-bottom: 10px;
+}
+.world{
+    position: absolute;
+    right: 0;
+    font-weight: 700;
+    font-size: 12rem;
+    background:  linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(img/bg.jpg) center;
+    background-size: cover;
+    background-clip: text;
+	color: transparent;
+    filter: drop-shadow(0px 0px 1px greenyellow);
+    /* text-shadow: 0 0 1px greenyellow; */
+}
+
+.hero-details{
+    position: relative;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.hero-details a{
+    color: #dfdfdf;
+    font-size: 15px;
+    text-decoration: underline rgba(172, 255, 47, 0.719);
+    /* border-bottom: 1px solid rgba(172, 255, 47, 0.644); */
+}
+.circle{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: 1px solid greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: none;
+}
+.dot{
+    height: 5px;
+    width: 5px;
+    border-radius: 100%;
+    background-color: greenyellow;
+}
+.width-line{
+    position: absolute;
+    left: -50%;
+    width: 30px;
+    opacity: 0;
+    height: 1.5px;
+    background-color: greenyellow;
+}
+
+
+.hero-details a:hover{
+    color: greenyellow;
+    transition: .5s;
+}
+.hero-details:hover .width-line{
+    opacity: 1;
+    animation: .5s righttoleft ease;
+}
+
+@keyframes righttoleft{
+    from{
+        width: 0;
+    }
+    to{
+        width: 30px;
+    }
+}
+
+
+/* ------- start about section */
+
+.about{
+    max-width: 90%;
+    margin: auto;
+    padding: 4rem 0;
+    color: white;
+}
+.bg-relative{
+    position: relative;
+}
+.team-pic{
+    width: 100%;
+}
+.bg-team-pic{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    bottom: 15px;
+    left: 0px;
+}
+
+.about-text{
+    margin-top: 2rem;
+}
+
+.about-text-header{
+    font-size: 37px;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 7px;
+}
+
+.about-text-paragraph{
+    margin-top: 1rem;
+    color: #b6b6b6;
+    line-height: 25px;
+}
+
+.about-icons{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-bottom: 2.5rem;
+}
+.about-icons div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-img-border{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #636363;
+
+}
+.icon-img-border img{
+    margin-left: -1px;
+}
+
+.about-more-btn{
+    padding: 10px 35px;
+    border: 1px solid #636363;
+    color: #dfdfdf;
+    transition: .5s;
+}
+
+.about-more-btn:hover{
+    padding: 10px 35px;
+    border: 1px solid #dfdfdf;
+    color: greenyellow;
+}
+
+
+
+/* ---------------------  start ranning */
+
+.ranning-paragraph {
+    display: flex;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scroll-top-icon{
+    font-size: 20px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 0px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: greenyellow; 
+    border-radius: 0px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: greenyellow; 
+  }
