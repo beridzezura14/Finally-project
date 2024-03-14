@@ -321,6 +321,7 @@ header{
     border: 1px solid #636363;
     color: #dfdfdf;
     transition: .5s;
+
 }
 
 .about-more-btn:hover{
@@ -334,8 +335,34 @@ header{
 /* ---------------------  start ranning */
 
 .ranning-paragraph {
+    overflow: hidden;
     display: flex;
-    
+    justify-content: flex-start;
+    transform: rotate(3deg);
+
+}
+.ranning-paragraph h3{
+    max-width: auto;
+    font-size: 40px;
+    text-transform: uppercase;
+    /* color: transparent; */
+    background-color: white;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: #2b2b2b;
+    -webkit-text-stroke-color: #2b2b2b;
+    white-space: no-wrap;
+    padding: 0 1rem;
+    letter-spacing: 3px;
+    animation: 3s move-text ease-in infinite;
+}
+
+@keyframes move-text{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%); 
+    }
 }
 
 
