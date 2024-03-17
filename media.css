@@ -46,6 +46,9 @@
         height: 390px;
     }
 
+    .personal-img{
+        height: 400px;
+    }
 
 }
 @media(min-width: 1120px){
@@ -166,5 +169,14 @@
     .service-btn{
         position: absolute;
         bottom: 40px;
+    }
+
+
+    .team-members{
+        max-width: 1080px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .about-person-place{
+        z-index: -1;
     }
 }

@@ -99,10 +99,6 @@ header{
     /* background: url(img/1969301946.mp4) center no-repeat;
     background-size: cover; */
 }
-.headerVideo{
-    position: absolute;
-    width: 100%;
-}
 .header{
     max-width: 90%;
     margin: auto;
@@ -513,13 +509,110 @@ header{
     position: absolute;
     bottom: -40px !important;
 } 
+/* ---------------  start team members section */
 
+.team-members{
+    max-width: 90%;
+    margin: auto;
+    padding: 2rem 0 4rem;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:1rem;
+}
+.section-team-members h2{
+    font-size: 37px;
+    text-align: center;
+    color: #dfdfdf;
+}
+.member{
+    position: relative;
+}
+.personal-img{
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 1;
+    transition: .5s;
+}
 
+.name-vano{
+    background: url(img/team/vano.jpg) center;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 1;
+    transition: .5s;
+}
+.name-ilia{
+    background: url(img/team/ilia.JPG) center;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 1;
+    transition: .5s;
+}
+.name-rati{
+    background: url(img/team/rati.jpg) center;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 1;
+    transition: .5s;
+}
+.name-zura{
+    background: url(img/team/zura.jpg) center;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 1;
+    transition: .5s;
+}
 
+.about-person-place{
+    background-color: #15151577;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    /* z-index: -1; */
+}   
+.personal-img:hover{
+    opacity: 0.1;
+}
+.hover-socmedia:hover .about-person-place{
+    display: flex !important;
+}
 
+.about-person-place h4{
+    font-size: 30px;
+    width: 100%;
+}
+.about-person-place p{
+    margin-top: .5rem;
+    color: #96e025;
+}
+.social-icon{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
 
-
-
+.social-icon i{
+    font-size: 30px;
+}
 
 
 .scroll-top-icon{
